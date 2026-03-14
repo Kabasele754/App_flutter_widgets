@@ -13,15 +13,16 @@ class MyAppWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "My widgets app",
-      debugShowCheckedModeBanner: false,
+    return MaterialApp(  // structurer
+      title: "My widgets app", // properties
+      debugShowCheckedModeBanner: false, // debug APP 
       theme: ThemeData(
         useMaterial3: true
         
       ),
-      home: Scaffold(
-        appBar: AppBar(title: Text("My widgets", style: TextStyle(
+      home: Scaffold( // structurer
+        appBar: AppBar( // structurer
+          title: Text("My widgets", style: TextStyle(
           color: Colors.white,
           fontSize: 30,
         ),),
@@ -29,10 +30,10 @@ class MyAppWidget extends StatelessWidget{
         ),
 
         
-        body: Column(
+        body: Column( // Layout widget, on refence div
           children: [
-            // Widget d'affichage
-            Text("Widget d'affichage"),
+            // Widget d'affichage , h1, p, img
+            Text("Widget d'affichage", style: TextStyle(color: Colors.amber),),
             SizedBox(height: 10, ),
             Text("Text 2"),
               Divider(height: 10),
@@ -45,7 +46,7 @@ class MyAppWidget extends StatelessWidget{
               Icon(Icons.person, size: 50, color: Colors.blueAccent),
               Image.network("https://media.istockphoto.com/id/1458782106/photo/scenic-aerial-view-of-the-mountain-landscape-with-a-forest-and-the-crystal-blue-river-in.jpg?s=612x612&w=0&k=20&c=NXQ_OK6JtmyRRBef8Wd67UZ3scQJKySkXl1ORaActH4=",  width: 50, height: 50),
 
-              Image.asset("images/test.jpg", width: 50, height: 50),
+              Image.asset("assets/images/test.jpg", width: 50, height: 50),
                 Divider(height: 10),
 
 
@@ -69,7 +70,10 @@ class MyAppWidget extends StatelessWidget{
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
-                    
+                    decoration: InputDecoration(
+                      iconColor: Colors.blueAccent,
+
+                    ),
                   ),
                 )
 ,
@@ -80,7 +84,7 @@ class MyAppWidget extends StatelessWidget{
                     Image.network("https://media.istockphoto.com/id/1458782106/photo/scenic-aerial-view-of-the-mountain-landscape-with-a-forest-and-the-crystal-blue-river-in.jpg?s=612x612&w=0&k=20&c=NXQ_OK6JtmyRRBef8Wd67UZ3scQJKySkXl1ORaActH4=",   width: 90,height: 80),
             
             SizedBox(width: 20),
-              Image.asset("images/test.jpg", width: 90,height: 80),
+              Image.asset("assets/images/test.jpg", width: 90,height: 80),
            
 
                 ],)
